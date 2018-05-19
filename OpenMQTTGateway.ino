@@ -315,7 +315,8 @@ void setup()
   #endif
 
   client.setCallback(callback);
-  
+  trc(F("callback set"));
+
   delay(1500);
 
   lastReconnectAttempt = 0;
@@ -340,7 +341,8 @@ void setup()
   #endif
   #ifdef ZgatewayRF
     setupRF();
-  #endif
+    trc(F("after setup rf"));
+#endif
   #ifdef ZgatewayRF2
     setupRF2();
   #endif
